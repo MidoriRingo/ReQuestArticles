@@ -193,15 +193,6 @@ body{
     margin:0;
 }
 
-.article_description{
-    color:#000000;
-    size: 5vw;
-    padding-top: 4vw;
-    font-family: HelveticaNeueCyr-Light;
-    padding-left:4vw;
-    margin:0;
-}
-
 .logo{
     margin-left: 2vw;
     display: block;
@@ -372,4 +363,49 @@ body{
 #userDetails:hover{
     border:solid 0.1vw #CC0033;
     color: #CC0033;
+}
+
+.article{
+    padding-top: 1vw;
+    padding-left: 3vw;
+    display: inline-block;
+    height: 15vw;
+    background-color: white;
+    border-radius: 2vw;
+    margin: 1vw;
+}
+
+.article_title{
+    color:#CC0033;
+    size: 5vw;
+    padding-top: 2vw;
+    font-family: HelveticaNeueCyr-Medium;
+    margin:0;
+}
+
+.article_description{
+    color:black;
+    padding-top: 2vw;
+    font-family: HelveticaNeueCyr-Light;
+    margin:0;
+}
+
+.article_link{
+    font-family:HelveticaNeueCyr-Light;
+    font-size:1vw;
+    color:black;
+}
+
+.article_text{
+    
+}
+
+.article_full{
+    padding-top: 1vw;
+    padding-left: 3vw;
+    display: inline-block;
+    height: 100%;
+    background-color: white;
+    border-radius: 2vw;
+    margin: 1vw;
 }

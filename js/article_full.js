@@ -28,32 +28,36 @@ function articleClicked(id) {
 
 function showDetails() {
     $('#main').empty();
-
-    console.log(article.get("name"));
+    
     articleDiv = document.createElement("div");
-    articleDiv.className = "vacancy";
- 
-    var articleField = document.getElementById("main");
-//            name = document.createTextNode(article.get("name"));
-//
-//            newParagraph = document.createElement("p");
-//            newParagraph.className = "vacancy_title";
-//            newParagraph.appendChild(name);
+    articleDiv.className = "article_full";
 
+    var articleField = document.getElementById("main");
+    
+    nameParagraph = document.createElement("p");
+    nameParagraph.className = "article_title";
+    nameParagraph.appendChild(document.createTextNode(article.get("name")));
+    
     description = document.createTextNode(article.get("description"));
     descriptionParagraph = document.createElement("p");
     descriptionParagraph.className = "article_description";
     descriptionParagraph.appendChild(description);
+    
+    text = document.createTextNode(article.get("text"));
+    textParagraph = document.createElement("p");
+    textParagraph.className = "article_text";
+    textParagraph.appendChild(text);
+    
 
 //    link = document.createTextNode(article.get("link"));
 //    linkParagraph = document.createElement("p");
 //    linkParagraph.className = "vacancy_salary";
 //    linkParagraph.appendChild(link);
 
-    //    articleDiv.appendChild(newParagraph);
+    articleDiv.appendChild(nameParagraph);
     articleDiv.appendChild(descriptionParagraph);
-    articleDiv.appendChild(linkParagraph);
-
+ //   articleDiv.appendChild(linkParagraph);
+    articleDiv.appendChild(textParagraph);
     articleField.appendChild(articleDiv);
 
 

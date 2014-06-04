@@ -19,17 +19,15 @@ query.find({
     success: function(results) {
         results.forEach(function(entry) {
             articleDiv = document.createElement("div");
-            articleDiv.className = "vacancy";
+            articleDiv.className = "article";
             articleDiv.onclick = function() {
                 articleClicked(entry.id);
             };
 
-            name = document.createTextNode(entry.get("name"));
             console.log(entry.get("name"));
             nameParagraph = document.createElement("p");
-            nameParagraph.className = "vacancy_title";
+            nameParagraph.className = "article_title";
             nameParagraph.appendChild(document.createTextNode(entry.get("name")));
-
 
             description = document.createTextNode(entry.get("description"));
             console.log(description);
@@ -40,7 +38,7 @@ query.find({
             link = document.createTextNode(entry.get("link"));
             console.log(link);
             linkParagraph = document.createElement("p");
-            linkParagraph.className = "vacancy_salary";
+            linkParagraph.className = "article_link";
             linkParagraph.appendChild(link);
 
             articleDiv.appendChild(nameParagraph);
