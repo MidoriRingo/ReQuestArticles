@@ -38,16 +38,9 @@ function showDetails() {
     nameParagraph.className = "article_title";
     nameParagraph.appendChild(document.createTextNode(article.get("name")));
     
-    description = document.createTextNode(article.get("description"));
-    descriptionParagraph = document.createElement("p");
-    descriptionParagraph.className = "article_description";
-    descriptionParagraph.appendChild(description);
-    
-    text = document.createTextNode(article.get("text"));
+    text = article.get("text");
     textParagraph = document.createElement("p");
-    textParagraph.className = "article_text";
-    textParagraph.appendChild(text);
-    
+    textParagraph.innerHTML = text;
 
 //    link = document.createTextNode(article.get("link"));
 //    linkParagraph = document.createElement("p");
